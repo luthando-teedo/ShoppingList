@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="TshirtList.Orderpage"
+             BackgroundImageSource="backone.jpg"
+             Title="Your Order List"
+             >
+    <ContentPage.Content>
+        <StackLayout>
+           
+            <ListView ItemsSource="{Binding tshirtOrders}" HasUnevenRows="True" ItemTapped="ListView_ItemTapped">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout>
+                                
+                          <!--      <StackLayout.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                                </StackLayout.GestureRecognizers>
+                           -->     
+                                <Frame BackgroundColor="#80000000">
+                                <FlexLayout>
+                                    <Label Text="Customer Name: "
+                                           FontAttributes="Bold" 
+                                           TextColor="White"
+                                           FontSize="Medium"/>
+                                    
+                                    <Label Text="{Binding Name}" 
+                                           TextColor="OrangeRed"
+                                           FontSize="Medium"/>
+                                </FlexLayout>
+                                </Frame>
+                                
+                                <FlexLayout Margin="20,0,0,0">
+                                    <Label Text="Gender: " 
+                                           FontAttributes="Bold" 
+                                           TextColor="White"/>
+                                    <Label Text="{Binding Gender}" 
+                                           TextColor="OrangeRed"/>
+                                </FlexLayout>
+
+                                <FlexLayout Margin="20,0,0,0">
+                                    <Label Text="T-shirt Size: " 
+                                           FontAttributes="Bold" 
+                                           TextColor="White"/>
+                                    <Label Text="{Binding Size}" 
+                                           TextColor="OrangeRed"/>
+                                </FlexLayout>
+
+                                <FlexLayout Margin="20,0,0,0">
+                                    <Label Text="Date: " 
+                                           FontAttributes="Bold" 
+                                           TextColor="White"/>
+                                    <Label Text="{Binding Date}" 
+                                           TextColor="OrangeRed"/>
+                                </FlexLayout>
+
+                                <FlexLayout Margin="20,0,0,0">
+                                    <Label Text="T-shirt Color "
+                                           FontAttributes="Bold" 
+                                           TextColor="White"/>
+                                    <Label Text="{Binding Color}" 
+                                           TextColor="OrangeRed"/>
+                                </FlexLayout>
+                                
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
