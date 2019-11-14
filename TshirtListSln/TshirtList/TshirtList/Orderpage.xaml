@@ -10,68 +10,80 @@
              >
     <ContentPage.Content>
         <StackLayout>
-           
-            <ListView ItemsSource="{Binding tshirtOrders}" HasUnevenRows="True" ItemTapped="ListView_ItemTapped">
-                <ListView.ItemTemplate>
-                    <DataTemplate>
-                        <ViewCell>
-                            <StackLayout>
-                                
-                          <!--      <StackLayout.GestureRecognizers>
+            <Button Text="Go to Server" 
+                    Clicked="Button_Clicked"
+                    BackgroundColor="White"
+                    CornerRadius="50"
+                    Margin="0,10,0,0"
+                    TextColor="OrangeRed"
+                    HorizontalOptions="CenterAndExpand"
+                    VerticalOptions="Center"
+                    WidthRequest="380"/>
+
+            <StackLayout>
+
+                <ListView ItemsSource="{Binding tshirtOrders}" HasUnevenRows="True" ItemTapped="ListView_ItemTapped">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout>
+
+                                    <!--      <StackLayout.GestureRecognizers>
                                     <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
                                 </StackLayout.GestureRecognizers>
-                           -->     
-                                <Frame BackgroundColor="#80000000">
-                                <FlexLayout>
-                                    <Label Text="Customer Name: "
+                           -->
+                                    <Frame BackgroundColor="#80000000">
+                                        <FlexLayout>
+                                            <Label Text="Customer Name: "
                                            FontAttributes="Bold" 
                                            TextColor="White"
                                            FontSize="Medium"/>
-                                    
-                                    <Label Text="{Binding Name}" 
+
+                                            <Label Text="{Binding Name}" 
                                            TextColor="OrangeRed"
                                            FontSize="Medium"/>
-                                </FlexLayout>
-                                </Frame>
-                                
-                                <FlexLayout Margin="20,0,0,0">
-                                    <Label Text="Gender: " 
+                                        </FlexLayout>
+                                    </Frame>
+
+                                    <FlexLayout Margin="20,0,0,0">
+                                        <Label Text="Gender: " 
                                            FontAttributes="Bold" 
                                            TextColor="White"/>
-                                    <Label Text="{Binding Gender}" 
+                                        <Label Text="{Binding Gender}" 
                                            TextColor="OrangeRed"/>
-                                </FlexLayout>
+                                    </FlexLayout>
 
-                                <FlexLayout Margin="20,0,0,0">
-                                    <Label Text="T-shirt Size: " 
+                                    <FlexLayout Margin="20,0,0,0">
+                                        <Label Text="T-shirt Size: " 
                                            FontAttributes="Bold" 
                                            TextColor="White"/>
-                                    <Label Text="{Binding Size}" 
+                                        <Label Text="{Binding Size}" 
                                            TextColor="OrangeRed"/>
-                                </FlexLayout>
+                                    </FlexLayout>
 
-                                <FlexLayout Margin="20,0,0,0">
-                                    <Label Text="Date: " 
+                                    <FlexLayout Margin="20,0,0,0">
+                                        <Label Text="Date: " 
                                            FontAttributes="Bold" 
                                            TextColor="White"/>
-                                    <Label Text="{Binding Date}" 
+                                        <Label Text="{Binding Date}" 
                                            TextColor="OrangeRed"/>
-                                </FlexLayout>
+                                    </FlexLayout>
 
-                                <FlexLayout Margin="20,0,0,0">
-                                    <Label Text="T-shirt Color "
+                                    <FlexLayout Margin="20,0,0,0">
+                                        <Label Text="T-shirt Color "
                                            FontAttributes="Bold" 
                                            TextColor="White"/>
-                                    <Label Text="{Binding Color}" 
+                                        <Label Text="{Binding Color}" 
                                            TextColor="OrangeRed"/>
-                                </FlexLayout>
-                                
-                            </StackLayout>
-                        </ViewCell>
-                    </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>
+                                    </FlexLayout>
 
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+
+            </StackLayout>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

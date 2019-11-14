@@ -37,5 +37,10 @@ namespace TshirtList
         {
             return database.DeleteAsync(item);
         }
+
+        internal IList<ClassProperties> DeleteItemAsync(int stuffs)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

@@ -48,10 +48,14 @@ namespace TshirtList
                 //DELETE STUFF
 
                 var tshirtorders = e.Item as ClassProperties;
-                var stuffs = App.Database;
-                //tshirtOrders = await stuffs.DeleteItemAsync((sender as ClassProperties).ID);
+                //var stuffs = tshirtorders.ID;
             }
 
+        }
+
+        private async void Button_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new SendToServer());
         }
     }
 }
