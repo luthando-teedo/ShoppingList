@@ -63,13 +63,15 @@ namespace TshirtList
             */
         }
 
-        private void Button_Clicked_1(object sender, EventArgs e)
+        private async void Button_Clicked_1(object sender, EventArgs e)
         {
             Name_input.Text = "";
             Gender_input.Text = "";
             shirtSize_input.Text = "";
             ShirtColor_input.Text = "";
             address_input.Text = "";
+
+            await Navigation.PushAsync(new MainPage());
         }
     }
 }

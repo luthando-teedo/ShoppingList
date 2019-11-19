@@ -25,6 +25,7 @@
                 CornerRadius="50" 
                 HorizontalOptions="CenterAndExpand" 
                 WidthRequest="250"
+                TextColor="White"
                 Clicked="Button_Clicked_1"/>
     </StackLayout>
 

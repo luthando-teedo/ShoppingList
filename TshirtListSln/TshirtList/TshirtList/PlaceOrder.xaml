@@ -93,7 +93,8 @@
 
             </Grid>
 
-            <Button Text="SAVE"
+            <Button ImageSource="cart.png"
+                    Text="ADD TO CART"                    
                     BackgroundColor="OrangeRed"
                     HorizontalOptions="CenterAndExpand"
                     VerticalOptions="Center"

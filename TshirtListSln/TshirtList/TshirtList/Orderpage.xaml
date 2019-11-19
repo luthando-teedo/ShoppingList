@@ -10,16 +10,6 @@
              >
     <ContentPage.Content>
         <StackLayout>
-            <Button Text="Go to Server" 
-                    Clicked="Button_Clicked"
-                    BackgroundColor="White"
-                    CornerRadius="50"
-                    Margin="0,10,0,0"
-                    TextColor="OrangeRed"
-                    HorizontalOptions="CenterAndExpand"
-                    VerticalOptions="Center"
-                    WidthRequest="380"/>
-
             <StackLayout>
 
                 <ListView ItemsSource="{Binding tshirtOrders}" HasUnevenRows="True" ItemTapped="ListView_ItemTapped">
@@ -34,14 +24,17 @@
                            -->
                                     <Frame BackgroundColor="#80000000">
                                         <FlexLayout>
+                                            <Image Source="tshirtIcon.png" Scale=".8"/>
                                             <Label Text="Customer Name: "
-                                           FontAttributes="Bold" 
-                                           TextColor="White"
-                                           FontSize="Medium"/>
+                                                   FontAttributes="Bold" 
+                                                   TextColor="White"
+                                                   FontSize="Medium"
+                                                   Margin="0,20,0,0"/>
 
                                             <Label Text="{Binding Name}" 
                                            TextColor="OrangeRed"
-                                           FontSize="Medium"/>
+                                           FontSize="Medium"
+                                                   Margin="0,20,0,0"/>
                                         </FlexLayout>
                                     </Frame>
 
@@ -76,6 +69,14 @@
                                         <Label Text="{Binding Color}" 
                                            TextColor="OrangeRed"/>
                                     </FlexLayout>
+                                    
+                                    <FlexLayout Margin="20,0,0,0">
+                                        <Label Text="Address "
+                                           FontAttributes="Bold" 
+                                           TextColor="White"/>
+                                        <Label Text="{Binding Address}" 
+                                           TextColor="OrangeRed"/>
+                                    </FlexLayout>
 
                                 </StackLayout>
                             </ViewCell>
@@ -84,6 +85,30 @@
                 </ListView>
 
             </StackLayout>
+            <FlexLayout>
+            <Button Text="PLACE ANOTHER ORDER" 
+                    Clicked="Button_Clicked_1"                   
+                    CornerRadius="50"
+                    Margin="0,10,0,10"
+                    TextColor="White"
+                     BackgroundColor="Transparent"
+                    BorderColor="White" 
+                    BorderWidth="2"
+                    HorizontalOptions="CenterAndExpand"
+                    VerticalOptions="Center"
+                    WidthRequest="380"/>
+
+            <Button Text="CONFIRM ORDER" 
+                    Clicked="Button_Clicked"
+                    BackgroundColor="White"
+                    CornerRadius="50"
+                    Margin="0,10,0,10"
+                    TextColor="OrangeRed"
+                    HorizontalOptions="CenterAndExpand"
+                    VerticalOptions="Center"
+                    WidthRequest="380"/>
+            </FlexLayout>
+
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
