@@ -30,20 +30,11 @@ namespace TshirtList
             var stuff = App.Database;
             tshirtOrders = await stuff.GetItemsAsync();
             BindingContext = this;
+
+            
         }
 
-        //private async void TapGestureRecognizer_Tapped(object sender, EventArgs e)
-        //{
-            
-        //   var result = await DisplayAlert("Hi Customer", "Do you want to Delete?", "Yes", "No");
-
-        //    if (result)
-        //    {
-        //          //DELETE STUFF
-        //    }
- 
-        //}
-
+        //DELETING WHATEVER YOU TAPPED ON
         private async void ListView_ItemTapped(object sender, ItemTappedEventArgs e)
         {
 
@@ -63,6 +54,12 @@ namespace TshirtList
 
         private async void Button_Clicked(object sender, EventArgs e)
         {
+
+            var current = Connectivity.NetworkAccess;
+            if (current == NetworkAccess.Internet)
+            {
+                await DisplayAlert("Connection", "Internet is working", "ok");
+            }
             var databaseContent = App.Database;
             tShirtOrder = await databaseContent.GetItemsAsync();
 

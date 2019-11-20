@@ -17,11 +17,6 @@
                         <DataTemplate>
                             <ViewCell>
                                 <StackLayout>
-
-                                    <!--      <StackLayout.GestureRecognizers>
-                                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
-                                </StackLayout.GestureRecognizers>
-                           -->
                                     <Frame BackgroundColor="#80000000">
                                         <FlexLayout>
                                             <Image Source="tshirtIcon.png" Scale=".8"/>
