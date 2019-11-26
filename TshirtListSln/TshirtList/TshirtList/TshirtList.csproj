@@ -13,6 +13,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Update="EditorPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
     <EmbeddedResource Update="Orderpage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>

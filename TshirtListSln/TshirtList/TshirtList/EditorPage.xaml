@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="TshirtList.EditorPage"
+             BackgroundImageSource="backone.jpg"
+             Title="Edit Your Order">
+  
+    <ContentPage.Content>
+        
+        <StackLayout>
+            <Image Source="tshirtBG.jpg"/>
+            <Frame BackgroundColor="#90000000" Margin="0,-240,0,0" HeightRequest="195">
+                <Label Text="LOVE YOUR T_SHIRT." 
+                       HorizontalOptions="Center" 
+                       VerticalOptions="Center" 
+                       TextColor="White"
+                       FontAttributes="Bold"
+                       FontSize="35"/>
+            </Frame>
+            
+            <FlexLayout Margin="0,-50,0,0">
+                <Image Source="tshirtIcon.png" Scale=".9"/>
+                <Label Text="Customer Name: "
+                       FontAttributes="Bold" 
+                       TextColor="White"
+                       FontSize="Medium"
+                       Margin="0,20,0,0"/>
+
+                <Entry Text="{Binding Name}" 
+                       TextColor="OrangeRed"
+                       FontSize="Medium"
+                       Margin="0,10,0,0"/>
+            </FlexLayout>
+
+            <FlexLayout Margin="20,0,0,0">
+                <Label Text="Gender: " 
+                       FontAttributes="Bold" 
+                       TextColor="White"/>
+                <Entry Text="{Binding Gender}" 
+                       TextColor="OrangeRed"
+                       Margin="0,-10,0,0"/>
+            </FlexLayout>
+
+            <FlexLayout Margin="20,0,0,0">
+                <Label Text="T-shirt Size: " 
+                       FontAttributes="Bold" 
+                       TextColor="White"/>
+                <Entry Text="{Binding Size}" 
+                       TextColor="OrangeRed"
+                       Margin="0,-10,0,0"/>
+            </FlexLayout>
+
+            <FlexLayout Margin="20,0,0,0">
+                <Label Text="Date: " 
+                       FontAttributes="Bold" 
+                       TextColor="White"/>
+                <Entry Text="{Binding Date}" 
+                       TextColor="OrangeRed"
+                       Margin="0,-10,0,0"/>
+            </FlexLayout>
+
+            <FlexLayout Margin="20,0,0,0">
+                <Label Text="T-shirt Color "
+                       FontAttributes="Bold" 
+                       TextColor="White"/>
+                <Entry Text="{Binding Color}" 
+                       TextColor="OrangeRed"
+                       Margin="0,-10,0,0"/>
+            </FlexLayout>
+
+            <FlexLayout Margin="20,0,0,0">
+                <Label Text="Address "
+                 FontAttributes="Bold" 
+                 TextColor="White"/>
+                <Entry Text="{Binding Address}" 
+                       TextColor="OrangeRed"
+                        Margin="0,-10,0,0"/>
+            </FlexLayout>
+            
+            
+            <Grid Margin="0,20,0,0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Button Text="CONFIRM EDIT"
+                        Clicked="Edit_Clicked"
+                        Grid.Row="0" 
+                        Grid.Column="0"
+                        BackgroundColor="black"
+                        TextColor="White"
+                        CornerRadius="50"
+                        Margin="10,0,0,0"/>
+                
+                <Button Text="VIEW MAP" 
+                        Grid.Row="0" 
+                        Grid.Column="1"
+                        BackgroundColor="White"
+                        CornerRadius="50"
+                        Margin="0,0,10,0"/>
+                
+                
+
+            </Grid>
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

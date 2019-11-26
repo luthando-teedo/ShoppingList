@@ -16,11 +16,15 @@ namespace TshirtList
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Orderpage : ContentPage
     {
-        public List<ClassProperties> tShirtOrder { get; set; }
+        public List<ClassProperties> TshirtOrder { get; set; }
         public IList<ClassProperties> tshirtOrders { get; set; }
+        //public Product CurrentProduct { get; set; }
         public Orderpage()
         {
             InitializeComponent();
+
+            //CurrentProduct = product;
+            //BindingContext = CurrentProduct;
         }
 
         protected async override void OnAppearing()
@@ -37,18 +41,23 @@ namespace TshirtList
         //DELETING WHATEVER YOU TAPPED ON
         private async void ListView_ItemTapped(object sender, ItemTappedEventArgs e)
         {
+            //var tappedItem = e.Item as tshirtOrders;
 
-            var result = await DisplayAlert($"Hellow There!", "Do you want to Delete?", "Yes", "No");
+            //var result = await DisplayAlert($"Hellow There!", "Do you want to Delete?", "Yes", "No");
+            var tshirtorder = e.Item as ClassProperties;
+           // if (result)
+            //{
+                //delete stuff
 
-            if (result)
-            {
-                //DELETE STUFF
+               //var tshirtorder = e.Item as ClassProperties;
+               //await App.Database.DeleteItemAsync(tshirtorder);
 
-                var tshirtOrder = e.Item as ClassProperties;
-                await App.Database.DeleteItemAsync(tshirtOrder);
 
-                await Navigation.PushAsync(new Orderpage());
-            }
+           // }
+            await Navigation.PushAsync(new EditorPage(tshirtorder));
+
+            //var selectedItem = e.Item as Product;
+            //await Navigation.PushAsync(new EditorPage(selectedItem));
 
         }
 
@@ -61,9 +70,9 @@ namespace TshirtList
                 await DisplayAlert("Connection", "Internet is working", "ok");
             }
             var databaseContent = App.Database;
-            tShirtOrder = await databaseContent.GetItemsAsync();
+            TshirtOrder = await databaseContent.GetItemsAsync();
 
-            var MyServerOrders = tShirtOrder.Select(x => new ClassProperties()
+            var MyServerOrders = TshirtOrder.Select(x => new ClassProperties()
             {
                 Name = x.Name,
                 Gender = x.Gender,

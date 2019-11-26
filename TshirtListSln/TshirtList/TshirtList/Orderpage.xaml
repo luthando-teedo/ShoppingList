@@ -17,7 +17,7 @@
                         <DataTemplate>
                             <ViewCell>
                                 <StackLayout>
-                                    <Frame BackgroundColor="#80000000">
+                                    <Frame BackgroundColor="#80000000" Margin="0,0,0,10">
                                         <FlexLayout>
                                             <Image Source="tshirtIcon.png" Scale=".8"/>
                                             <Label Text="Customer Name: "
@@ -33,7 +33,7 @@
                                         </FlexLayout>
                                     </Frame>
 
-                                    <FlexLayout Margin="20,0,0,0">
+                                    <!--<FlexLayout Margin="20,0,0,0">
                                         <Label Text="Gender: " 
                                            FontAttributes="Bold" 
                                            TextColor="White"/>
@@ -71,7 +71,7 @@
                                            TextColor="White"/>
                                         <Label Text="{Binding Address}" 
                                            TextColor="OrangeRed"/>
-                                    </FlexLayout>
+                                    </FlexLayout>-->
 
                                 </StackLayout>
                             </ViewCell>

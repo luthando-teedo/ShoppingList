@@ -49,18 +49,18 @@ namespace TshirtList
             if (tshirt != null)
             {
                 await App.Database.SaveItemAsync(tshirt);
-               
+
                 await Navigation.PushAsync(new Orderpage());
 
             }
 
-           
-         /* Name_input.Text = "";
-            Gender_input.Text = "";
-            shirtSize_input.Text = "";
-            ShirtColor_input.Text = "";
-            address_input.Text = "";
-            */
+
+            /* Name_input.Text = "";
+               Gender_input.Text = "";
+               shirtSize_input.Text = "";
+               ShirtColor_input.Text = "";
+               address_input.Text = "";
+               */
         }
 
         private async void Button_Clicked_1(object sender, EventArgs e)

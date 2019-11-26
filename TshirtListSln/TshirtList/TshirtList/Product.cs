@@ -5,7 +5,7 @@ using System.Text;
 
 namespace TshirtList
 {
-    class Product
+    public class Product
     {
         [PrimaryKey, AutoIncrement]
 

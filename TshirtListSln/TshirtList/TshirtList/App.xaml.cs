@@ -26,7 +26,10 @@ namespace TshirtList
             {
                 if(database == null)
                 {
-                    database = new functionalityClass(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "T_shirtlistSQLite.db3"));
+                    database = new functionalityClass
+                        (Path.Combine
+                        (Environment.GetFolderPath
+                        (Environment.SpecialFolder.LocalApplicationData), "T_shirtlistSQLite.db3"));
                 }
 
                 return database;
